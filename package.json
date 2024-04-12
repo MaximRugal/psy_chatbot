@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "cross-env NODE_ENV= nodemon index.js",
-    "start": "node index.js",
+    "start": "npm i && node index.js",
     "start:dev": "cross-env NODE_ENV=.development nodemon index.js"
   },
   "keywords": [
@@ -26,6 +26,7 @@
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "axios": "^1.3.6",
     "dotenv": "^16.0.3",
+    "express": "^4.19.2",
     "fluent-ffmpeg": "^2.1.2",
     "google-translate-api-x": "^10.6.4",
     "node-telegram-bot-api": "^0.61.0",
