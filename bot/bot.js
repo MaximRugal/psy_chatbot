@@ -10,7 +10,7 @@ import fsPromises from 'fs/promises';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-
+const webhookDomain = 'https://psy-chatbot.vercel.app/';
 class Bot {
   settings = {
     responseMode: 'any', // 'text', 'voice', 'any'
@@ -53,7 +53,8 @@ class Bot {
     commands.test2(telegramBot);
     handlers.voice(telegramBot);
     handlers.text(telegramBot);
-    this.bot.launch();
+    this.bot.launch({ webhook: { domain: webhookDomain, port: 5000 } });
+    console.log(`Bot launched: ${webhookDomain}`);
     Logger.info('Bot status:', `mode: ${config.getLaunchMode()}`, ``, 'STARTED', 'v');
   }
 
