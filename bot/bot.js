@@ -54,7 +54,7 @@ class Bot {
     commands.test2(telegramBot);
     handlers.voice(telegramBot);
     handlers.text(telegramBot);
-    this.bot.launch({ webhook: { domain: webhookDomain, port: 5050 } });
+    this.bot.launch({ webhook: { domain: webhookDomain, port: 3000 } });
     console.log(`Bot launched: ${webhookDomain}`);
     Logger.info('Bot status:', `mode: ${config.getLaunchMode()}`, ``, 'STARTED', 'v');
   }
