@@ -11,7 +11,7 @@ import fsPromises from 'fs/promises';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const PORT = process.env.PORT;
-const webhookDomain = 'https://psy-chatbot.vercel.app/';
+const webhookDomain = 'https://shy-swimsuit-fly.cyclic.app/';
 class Bot {
   settings = {
     responseMode: 'any', // 'text', 'voice', 'any'
